@@ -1,0 +1,29 @@
+* Redmine PukiWiki formatter
+
+This is a redmine plugin for formatting wikipages as PukiWiki.
+
+** What is redmine?
+Redmine is a flexible project management web application.
+See [[the official site:http://www.redmine.org]] for more details.
+
+** What is PukiWiki?
+[[PukiWiki:http://pukiwiki.sourceforge.jp/]] is a wiki clone.
+
+** Plugin installation
+*** Prerequisites
+- Redmine and its prerequisites
+
+*** Installation
++ Copy the plugin directory into the vendor/plugins directory
++ Start Redmine
+
+Installed plugins are listed on 'Admin -> Information' screen.
+
+** Copyright
+- Redmine PukiWiki formatter is developed by Yugui (Yuki Sonoda)  <yugui AT yugui.jp>.
+- pukipa.rb was originally developed by gorou (Yuuichi Tateno)  <hotchpotch AT gmail.com>.
+-- lib/pukipa.rb and lib/pukiwikiparser.rb are modified version of pukipa.rb by Minero Aoki  <aamine AT loveruby.net>.
+-- http://jp.rubyist.net/magazine/?0010-CodeReview
+
+** License
+MIT License
