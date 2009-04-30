@@ -141,8 +141,8 @@ class PukiWikiParser
       case
       when htmlchar = $1 then escape(htmlchar)
       when bracket  = $2 then a_href($3, bracket, 'outlink')
-      when pagename = $4 then a_href(page_uri(pagename), pagename, 'pagelink')
-      when page_alias = $5 then a_href(page_uri($6), page_alias, 'pagelink')
+      when pagename = $4 then "[[#{pagename}|#{pagename}]]"
+      when page_alias = $5 then "[[#{$6}|#{page_alias}]]"
       when uri      = $7 then a_href(uri, uri, 'outlink')
       else
         raise 'must not happen'
