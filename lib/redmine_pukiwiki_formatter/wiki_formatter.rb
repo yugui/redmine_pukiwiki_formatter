@@ -1,13 +1,14 @@
 require 'pukiwikiparser'
-require 'pukipa'
 
 module RedminePukiwikiFormatter
   class WikiFormatter
+    cattr_accessor :logger
     def initialize(text)
-      @pukipa = Pukipa.new(text)
+      @text = text
+      @pukipa = PukiWikiParser.new(logger)
     end
     def to_html(&block)
-      @pukipa.to_html
+      @pukipa.to_html(@text, [])
     end
   end
 end

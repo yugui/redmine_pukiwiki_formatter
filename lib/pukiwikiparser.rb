@@ -134,14 +134,16 @@ class PukiWikiParser
         ([&<>"])                             # $1: HTML escape characters
       | \[\[(.+?):\s*(https?://\S+)\s*\]\]   # $2: label, $3: URI
       | (#{autolink_re()})                   # $4: Page name autolink
-      | (#{URI.regexp('http')})              # $5...: URI autolink
+      | \[\[(.+?)\>(.+?)\]\]                 # $5: alias, $6: target
+      | (#{URI.regexp('http')})              # $7...: URI autolink
       >x
     str.gsub(@inline_re) {
       case
       when htmlchar = $1 then escape(htmlchar)
       when bracket  = $2 then a_href($3, bracket, 'outlink')
       when pagename = $4 then a_href(page_uri(pagename), pagename, 'pagelink')
-      when uri      = $5 then a_href(uri, uri, 'outlink')
+      when page_alias = $5 then a_href(page_uri($6), page_alias, 'pagelink')
+      when uri      = $7 then a_href(uri, uri, 'outlink')
       else
         raise 'must not happen'
       end

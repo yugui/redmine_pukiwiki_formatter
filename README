@@ -20,10 +20,15 @@ See [[the official site:http://www.redmine.org]] for more details.
 Installed plugins are listed on 'Admin -> Information' screen.
 
 ** Copyright
-- Redmine PukiWiki formatter is developed by Yugui (Yuki Sonoda)  <yugui AT yugui.jp>.
-- pukipa.rb was originally developed by gorou (Yuuichi Tateno)  <hotchpotch AT gmail.com>.
--- lib/pukipa.rb and lib/pukiwikiparser.rb are modified version of pukipa.rb by Minero Aoki  <aamine AT loveruby.net>.
--- http://jp.rubyist.net/magazine/?0010-CodeReview
+- Copyright (c) ?-2005 gorou (Yuuichi TATENO)  <hotchpotch AT gmail.com>.
+- Copyright (c) 2005 Minero AOKI  <aamine AT loveruby.net>.
+- Copyright (c) 2009 Yugui (Yuki SONODA)  <yugui AT yugui.jp>.
+
+
+Redmine PukiWiki formatter is developed by Yugui.
+- lib/pukiwikiparser.rb is based on Minero's version.
+-- this was originally called pukipa.rb, developed by Yuuichi, and distributed under MIT license.
+-- see http://jp.rubyist.net/magazine/?0010-CodeReview
 
 ** License
 MIT License

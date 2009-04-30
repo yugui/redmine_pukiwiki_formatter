@@ -1,9 +1,9 @@
 # Redmine PukiWiki formatter
 require 'redmine'
-require 'pukipa'
 require 'pukiwikiparser'
 
 RAILS_DEFAULT_LOGGER.info 'Starting PukiWiki formatter for RedMine'
+RedminePukiwikiFormatter::WikiFormatter.logger = RAILS_DEFAULT_LOGGER
 
 Redmine::Plugin.register :redmine_rd_formatter do
   name 'Pukiwiki formatter'
